@@ -38,15 +38,28 @@ const Header = () => {
             openNavigation ? "flex" : "hidden"
           } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
-          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
-            {navigation.map((item) => (
-              <a
-                key={item.id}
-                className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-5 cursor-pointer px-6 py-6 md:py-8 lg:text-sm lg:text-n-2 lg:-mr-1 lg:font-semibold lg:hover:text-n-1 lg:leading-5`}
-              >
-                {item.title}
-              </a>
-            ))}
+          <div className="overflow-y-auto lg:overflow-hidden w-full">
+            <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+              {navigation.map((item) => (
+                <a
+                  key={item.id}
+                  className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-5 cursor-pointer px-6 py-6 md:py-8 lg:text-sm lg:text-n-2 lg:-mr-1 lg:font-semibold lg:hover:text-n-1 lg:leading-5
+                ${
+                  item.isOnlyMobile ? "flex items-center gap-4 lg:hidden" : ""
+                }`}
+                >
+                  {item.title}
+                  {item.icon && (
+                    <img
+                      src={item.icon}
+                      alt={item.icon}
+                      width={25}
+                      height={25}
+                    />
+                  )}
+                </a>
+              ))}
+            </div>
           </div>
           <HamburgerMenu />
         </nav>

@@ -5,6 +5,7 @@ import {
   notification2,
   notification3,
   notification4,
+  out,
   plusSquare,
   searchMd,
   telegram,
@@ -33,6 +34,27 @@ export const navigation = [
     title: "Roadmap",
     url: "",
   },
+  {
+    id: "5",
+    title: "Telegram",
+    url: "",
+    isOnlyMobile: true,
+    icon: out
+  },
+  {
+    id: "6",
+    title: "Twitter",
+    url: "",
+    isOnlyMobile: true,
+    icon: out
+  },
+  {
+    id: "7",
+    title: "Discord",
+    url: "",
+    isOnlyMobile: true,
+    icon: out
+  },
 ];
 
 export const navigationSosmed = [
@@ -47,7 +69,7 @@ export const navigationSosmed = [
     title: "twitter",
   },
   {
-    id: "2",
+    id: "3",
     url: discord,
     title: "discord",
   },
