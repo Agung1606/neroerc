@@ -30,7 +30,7 @@ const Header = () => {
       <div className="flex items-center px-6 lg:px-7.5 xl:px-10 max-lg:py-4">
         <div className="flex items-center gap-2">
           <img src={neroErc} width={65} height={65} alt="logo-brand" />
-          <p className="font-sans font-semibold text-4xl">neroErc</p>
+          <p className="hidden font-sans font-semibold text-4xl xl:flex">neroErc</p>
         </div>
 
         <nav
@@ -43,7 +43,7 @@ const Header = () => {
               {navigation.map((item) => (
                 <a
                   key={item.id}
-                  className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-5 cursor-pointer px-6 py-6 md:py-8 lg:text-sm lg:text-n-2 lg:-mr-1 lg:font-semibold lg:hover:text-n-1 lg:leading-5
+                  className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-5 cursor-pointer px-6 py-6 md:py-8 lg:text-sm lg:text-n-2 lg:-mr-0.5 lg:font-semibold lg:hover:text-n-1 lg:leading-5
                 ${
                   item.isOnlyMobile ? "flex items-center gap-4 lg:hidden" : ""
                 }`}
@@ -66,7 +66,7 @@ const Header = () => {
 
         <div className="hidden lg:flex items-center gap-2 ml-auto md:gap-4 lg:gap-6">
           {navigationSosmed.map((item) => (
-            <a key={item.id}>
+            <a key={item.id} className="cursor-pointer">
               <img src={item.url} width={30} height={30} alt={item.title} />
             </a>
           ))}

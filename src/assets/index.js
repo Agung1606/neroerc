@@ -74,6 +74,10 @@ import instagram from "./socials/instagram.svg";
 import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
 
+import google from "./company/google.png"
+import openai from "./company/openai.png"
+import tesla from "./company/tesla.png"
+
 export {
   out,
   neroErc,
@@ -142,4 +146,7 @@ export {
   instagram,
   telegram,
   twitter,
+  google,
+  openai,
+  tesla
 };
