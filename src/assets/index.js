@@ -1,4 +1,4 @@
-import neroErc from "./neroerc-logo.png"
+import neroErc from "./neroerc-logo.png";
 import check from "./check.svg";
 import play from "./play.svg";
 import gradient from "./gradient.png";
@@ -74,9 +74,9 @@ import instagram from "./socials/instagram.svg";
 import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
 
-import google from "./company/google.png"
-import openai from "./company/openai.png"
-import tesla from "./company/tesla.png"
+import google from "./company/google.png";
+import openai from "./company/openai.png";
+import tesla from "./company/tesla.png";
 
 export {
   out,
@@ -148,5 +148,5 @@ export {
   twitter,
   google,
   openai,
-  tesla
+  tesla,
 };
