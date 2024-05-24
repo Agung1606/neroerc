@@ -227,3 +227,9 @@ export const collabApps = [
     height: 32,
   },
 ];
+
+export const brainwaveServices = [
+  "Photo generating",
+  "Photo enhance",
+  "Seamless Integration",
+];
