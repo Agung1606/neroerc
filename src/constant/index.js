@@ -26,11 +26,8 @@ import {
   benefitCard6,
   figma,
   notion,
-  slack,
   photoshop,
-  protopie,
-  framer,
-  raindrop
+  neroErc,
 } from "../assets";
 
 export const navigation = [
@@ -99,7 +96,7 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-export const companyLogos = [google, openai, tesla, discord, twitter];
+export const companyLogos = [neroErc, neroErc, neroErc, neroErc];
 
 export const benefits = [
   {
@@ -196,8 +193,8 @@ export const collabApps = [
   },
   {
     id: "3",
-    title: "Slack",
-    icon: slack,
+    title: "Tesla",
+    icon: tesla,
     width: 34,
     height: 35,
   },
@@ -210,22 +207,22 @@ export const collabApps = [
   },
   {
     id: "5",
-    title: "Protopie",
-    icon: protopie,
+    title: "Twitter",
+    icon: twitter,
     width: 34,
     height: 34,
   },
   {
     id: "6",
-    title: "Framer",
-    icon: framer,
-    width: 26,
-    height: 34,
+    title: "OpenAI",
+    icon: openai,
+    width: 40,
+    height: 40,
   },
   {
     id: "7",
-    title: "Raindrop",
-    icon: raindrop,
+    title: "Google",
+    icon: google,
     width: 38,
     height: 32,
   },
