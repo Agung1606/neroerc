@@ -21,6 +21,13 @@ const Header = () => {
       disablePageScroll();
     }
   };
+
+  const handleClick = () => {
+    if (!openNavigation) return;
+
+    enablePageScroll();
+    setOpenNavigation(false);
+  };
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
@@ -28,10 +35,12 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center px-6 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <div className="flex items-center gap-2">
+        <a className="flex items-center gap-2 cursor-pointer" href="#hero">
           <img src={neroErc} width={65} height={65} alt="logo-brand" />
-          <p className="hidden font-sans font-semibold text-4xl xl:flex">neroErc</p>
-        </div>
+          <p className="hidden font-sans font-semibold text-4xl xl:flex">
+            neroErc
+          </p>
+        </a>
 
         <nav
           className={`${
@@ -43,12 +52,23 @@ const Header = () => {
               {navigation.map((item) => (
                 <a
                   key={item.id}
-                  className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-5 cursor-pointer px-6 py-6 md:py-8 lg:text-sm lg:text-n-2 lg:-mr-0.5 lg:font-semibold lg:hover:text-n-1 lg:leading-5
-                ${
-                  item.isOnlyMobile ? "flex items-center gap-4 lg:hidden" : ""
-                }`}
+                  href={item.url}
+                  onClick={handleClick}
+                  className={`block relative cursor-pointer px-6 py-6 md:py-8 lg:-mr-0.5 ${
+                    item.isOnlyMobile ? "flex items-center gap-4 lg:hidden" : ""
+                  }`}
                 >
-                  {item.title}
+                  <p
+                    className={`font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-5 lg:text-sm lg:font-semibold lg:hover:text-n-1 lg:leading-5
+                    ${
+                      item.url === pathname.hash
+                        ? "z-2 lg:text-n-2 border-b border-color-5"
+                        : "lg:text-n-2/60"
+                    }
+                    `}
+                  >
+                    {item.title}
+                  </p>
                   {item.icon && (
                     <img
                       src={item.icon}
