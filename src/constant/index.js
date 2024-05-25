@@ -28,6 +28,11 @@ import {
   notion,
   photoshop,
   neroErc,
+  recording03,
+  recording01,
+  disc02,
+  chromecast,
+  sliders04,
 } from "../assets";
 
 export const navigation = [
@@ -226,4 +231,18 @@ export const collabApps = [
     width: 38,
     height: 32,
   },
+];
+
+export const neroErcServices = [
+  "Photo generating",
+  "Photo enhance",
+  "Seamless Integration",
+];
+
+export const neroErcServicesIcons = [
+  recording03,
+  recording01,
+  disc02,
+  chromecast,
+  sliders04
 ];
