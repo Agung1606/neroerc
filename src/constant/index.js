@@ -28,6 +28,11 @@ import {
   notion,
   photoshop,
   neroErc,
+  recording03,
+  recording01,
+  disc02,
+  chromecast,
+  sliders04,
 } from "../assets";
 
 export const navigation = [
@@ -228,8 +233,16 @@ export const collabApps = [
   },
 ];
 
-export const brainwaveServices = [
+export const neroErcServices = [
   "Photo generating",
   "Photo enhance",
   "Seamless Integration",
+];
+
+export const neroErcServicesIcons = [
+  recording03,
+  recording01,
+  disc02,
+  chromecast,
+  sliders04
 ];

@@ -1,9 +1,10 @@
 import React from "react";
 import Section from "./Section";
 import Heading from "./Heading";
-import { check, service1, service2 } from "../assets";
-import { brainwaveServices } from "../constant";
-import { Gradient } from "./design/Services";
+import { check, service1, service2, service3 } from "../assets";
+import { neroErcServices, neroErcServicesIcons } from "../constant";
+import { Gradient, PhotoChatMessage, VideoBar, VideoChatMessage } from "./design/Services";
+import Generating from "./Generating";
 
 const Services = () => {
   return (
@@ -32,7 +33,7 @@ const Services = () => {
                 neroErc unlocks the potential of AI-powered applications
               </p>
               <ul className="body-2">
-                {brainwaveServices.map((item, index) => (
+                {neroErcServices.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-center py-4 border-t border-n-6"
@@ -43,6 +44,11 @@ const Services = () => {
                 ))}
               </ul>
             </div>
+            <Generating
+              className={
+                "absolute bottom-7 left-4 lg:left-1/2 lg:-translate-x-1/2 lg:w-[28rem] xl:w-[31rem] border border-n-1/10"
+              }
+            />
           </div>
 
           <div className="relative z-1 grid lg:grid-cols-2 gap-5">
@@ -56,10 +62,58 @@ const Services = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
+              <div className="absolute bottom-10 left-4 max-w-[28rem]">
+                <h4 className="h4 mb-4">Photo editing</h4>
+                <p className="body-2 text-n-3">
+                  Automatically enhance your photos using our AI app's photo
+                  editing feature. Try it now!
+                </p>
+              </div>
+              <PhotoChatMessage />
             </div>
 
             <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
+              <div className="py-12 px-4 xl:px-8">
+                <h4 className="h4 mb-4">Video generation</h4>
+                <p className="body-2 text-n-3 mb-[2rem]">
+                  The world's most powerful AI photo and video art generation
+                  engine. What will you create?
+                </p>
 
+                <ul className="flex items-center justify-between">
+                  {neroErcServicesIcons.map((item, index) => (
+                    <li
+                    key={index}
+                      className={`flex items-center justify-center rounded-2xl ${
+                        index === 2
+                          ? "bg-conic-gradient w-[3rem] h-[3rem] md:w-[4.5rem] md:h-[4.5rem] p-0.25"
+                          : "bg-n-6 w-10 h-10 md:w-15 md:h-15"
+                      }`}
+                    >
+                      <div
+                        className={`${
+                          index === 2 &&
+                          "bg-n-7 w-full h-full rounded-2xl flex items-center justify-center"
+                        }`}
+                      >
+                        <img src={item} alt={item} width={24} height={24} />
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="relative bg-n-8 rounded-xl overflow-hidden h-[20rem] md:h-[25rem]">
+                <img
+                  src={service3}
+                  alt="scary-robot"
+                  width={520}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
+              <VideoChatMessage />
+              <VideoBar />
+              </div>
             </div>
           </div>
 
