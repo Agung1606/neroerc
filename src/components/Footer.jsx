@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <Section className={"!px-0 !py-4"} crosses>
       <div className="container flex items-center sm:justify-between gap-10 max-sm:flex-col">
-        <p>© {new Date().getFullYear()}. All rights reserved.</p>
+        <p className="caption text-n-4 lg:block">© {new Date().getFullYear()}. All rights reserved.</p>
         <div className="flex flex-wrap gap-4">
           {socials.map((social) => (
             <a
