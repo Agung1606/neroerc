@@ -33,11 +33,10 @@ import {
   disc02,
   chromecast,
   sliders04,
-  roadmap1,
   roadmap2,
-  roadmap3,
-  roadmap4,
-  hero
+  discordBlack,
+  instagram,
+  facebook,
 } from "../assets";
 
 export const navigation = [
@@ -295,7 +294,7 @@ export const roadmap = [
     text: "Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.",
     date: "May 2023",
     status: "done",
-    imageUrl: hero,
+    imageUrl: roadmap2,
     colorful: true,
   },
   {
@@ -312,7 +311,7 @@ export const roadmap = [
     text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
     date: "May 2023",
     status: "done",
-    imageUrl: roadmap3,
+    imageUrl: roadmap2,
   },
   {
     id: "3",
@@ -323,3 +322,30 @@ export const roadmap = [
     imageUrl: roadmap2,
   },
 ];
+
+export const socials = [
+  {
+    id: "0",
+    title: "Discord",
+    iconUrl: discordBlack,
+    url: "#"
+  },
+  {
+    id: "1",
+    title: "Twitter",
+    iconUrl: twitter,
+    url: "#"
+  },
+  {
+    id: "2",
+    title: "Instagram",
+    iconUrl: instagram,
+    url: "#"
+  },
+  {
+    id: "3",
+    title: "Telegram",
+    iconUrl: telegram,
+    url: "#"
+  },
+]
